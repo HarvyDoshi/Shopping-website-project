@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>Home Page</title>
+<style>
+body {
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product p {
+  font-size: 16px;
+  color: #888;
+}
+
+.product .price {
+  font-size: 18px;
+  color: #e67e22;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product a {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.product a:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+ 
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Almedo Watches Online Store</h1>
+  <a href="main.html" style="color:white;background-color: blue;"><h3>Home</h3></a>
+</header>
+
+<h2>Select Your Favorite Watch</h2>
+
+<div class="container">
+  <div class="products">
+    <div class="product">
+      <img src="noise.webp" alt="Grey Noise Smart-Watch">
+      <h3>Noise Grey Smart-Watch</h3>
+      <p>Company: Noise</p>
+      <p>Model: Grey Noise Smart-Watch</p>
+      <p class="price">Price: ₹5600/-</p>
+      <a href="address.html">Buy Now</a>
+    </div>
+
+    <div class="product">
+      <img src="w1.png" alt="Titan Raga Viva">
+      <h3>Titan Raga Watch</h3>
+      <p>Company: Titan Raga</p>
+      <p>Model: Raga Viva Analog Dial</p>
+      <p class="price">Price: ₹3505/-</p>
+      <a href="address.html">Buy Now</a>
+    </div>
+
+    <div class="product">
+      <img src="w2.png" alt="Titan Analog Black Dial">
+      <h3>Titan Rado Watch</h3>
+      <p>Company: Titan Rado</p>
+      <p>Model: Titan Analog Black Dial</p>
+      <p class="price">Price: ₹5495/-</p>
+      <a href="address.html">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+
+  <p style="color: white;text-align: center;
+  background-color: #111;padding: 10px;">&copy; 2025 Almedo Watches. All rights reserved.</p>
+
+
+</body>
+</html>

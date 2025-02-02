@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Address</title>
+    <style>
+        #hd-block{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+        body {
+            background-color: cyan;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: yellow;
+            background-color: blue;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+            padding: 10px;
+        }
+        h3 {
+            color: white;
+        }
+        a {
+            font-size: 30px;
+            color: red;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            font-size: 20px;
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        p {
+            font-size: 25px;
+            text-align: center;
+        }
+        #submit {
+            display: block;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let address = document.getElementById("address").value;
+            let city = document.getElementById("city").value;
+            let state = document.getElementById("state").value;
+            let pin = document.getElementById("pin").value;
+            
+            if (!name || !address || !city || !state || !pin) {
+                alert("All fields are required!");
+                return false;
+            }
+            if (!/^[0-9]{6}$/.test(pin)) {
+                alert("Please enter a valid 6-digit pin code");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="hd-block">
+        <a href="main.html" style="background-color: blue;text-align: center;"><h3>Home</h3></a>
+    </div>
+    <form onsubmit="return validateForm()">
+        <h1>Shipping Address</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+        
+        <label for="pin">Pin Code:</label>
+        <input type="text" id="pin" name="pin" required pattern="[0-9]{6}" title="Please enter a valid 6-digit pin code">
+        
+        <p>Proceed for payment!</p>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
